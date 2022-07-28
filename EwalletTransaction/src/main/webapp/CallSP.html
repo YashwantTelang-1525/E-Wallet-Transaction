@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <br><br>
+    <h2>Deduct amount thru SP</h2>
+    <hr>
+    <form action="deduct.jsp" method="post">
+        <table>
+            <tr>
+                <td>Account Number</td>
+                <td><input type="text" name="accno" class="form-control" autocomplete="off"></td>
+            </tr>
+            <tr>
+                <td>Amount</td>
+                <td><input type="text" name="amount" class="form-control"></td>
+            </tr>
+            <tr>
+                <td>Reason</td>
+                <td>
+                    <textarea name="reason" cols="30" rows="4" class="form-control"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Submit" class="btn btn-secondary"></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+
+</div>
+</body>
+</html>

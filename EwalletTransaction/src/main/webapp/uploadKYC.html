@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>kyc document upload</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+	<h1 style="padding: 10px; color: cadetblue;">Upload KYC Document</h1>
+		<td><a href="homepage.jsp"><button type="button" class="btn btn-outline-success">back</button></a></td>
+	<hr>
+	<form name="frm" method="post" action="AddKyc" >
+    <table>
+    				<tr>
+                        <td>name</td>
+                        <td><input type="text" name="name" class="form-control" required></td>
+                       
+                    </tr>
+    				<tr>
+                        <td>id</td>
+                        <td><input type="text" name="id" class="form-control" required></td>
+                       
+                    </tr>
+    				<tr>
+                        <td>filepath</td>
+                        <td><input type="text" name="filepath" class="form-control" required></td>
+                        <td><input type="submit" value="Submit"  class="btn btn-outline-success"></td>
+                    </tr>
+
+    
+    </table>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add user account details</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1 style="padding: 10px; color: cadetblue;">Add account details</h1>
+		<a href="adminsetting.jsp"><button type="submit"  class="btn btn-outline-success">back</button></a>
+		<hr>
+		<form name="frm" method="post" action="Addaccount">
+					<table>
+			 		<tr>
+                        <td>account no</td>
+                        <td><input type="text" name="accnum" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>name</td>
+                        <td><input type="text" name="accname" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+					<td>account type:
+					<td><select  name="actype" class="form-control"> <option  value="fixed">fixed</option>
+  						<option value="saving">saving</option>
+  						<option value="current">current</option></select>
+		 	    	</tr>
+
+                    <tr>
+                        <td>balance</td>
+                        <td><input type="text" name="wbal" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>wallet id</td>
+                        <td><input type="text" name="watid" class="form-control" required></td>
+                    </tr>
+                    
+                </table>
+                <br>
+                <table>
+                <tr>
+                    <td><input type="submit" style="margin-left: 150px;" class="btn btn-outline-success"></td>
+                    </tr>
+                </table>
+                
+		</form>
+	</div>
+</body>
+</html>

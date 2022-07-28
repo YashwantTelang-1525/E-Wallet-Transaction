@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    
+<script type="text/javascript">
+function createRequestObject() {
+    var tmpXmlHttpObject;
+    if (window.XMLHttpRequest) {
+            tmpXmlHttpObject = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        tmpXmlHttpObject = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    return tmpXmlHttpObject;
+}
+
+
+var http = createRequestObject();
+
+function makeGetRequest() {
+    id=document.frm.uid.value;
+    http.open('get', 'Available.jsp?uid=' + id);
+    http.onreadystatechange = processResponse;
+    http.send(null);
+}
+
+function processResponse() {
+    if(http.readyState == 4){
+        var response = http.responseText;
+        document.getElementById('stat').innerHTML = response;
+    }
+}
+</script>
+    
+</head>
+
+<body>
+    
+        
+            <div class="container">
+                <h1 style="padding: 10px; color: cadetblue; margin-left:510px">Register</h1>
+                <hr>
+                <br>
+                <form name="frm" method="post" action="Register" style="margin-left:435px">
+                <table>
+                    <tr>
+                        <td>userid</td>
+                        <td><input type="text" name="uid" class="form-control" required></td>
+                        
+<td width="20px">
+<td><div id="stat"></div>
+                        
+                        
+                    </tr>
+
+                    <tr>
+                        <td>password </td>
+                        <td><input type="password" name="psw" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>city</td>
+                        <td><input type="text" name="city" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>email</td>
+                        <td><input type="email" name="eml" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>mobile</td>
+                        <td><input type="text" name="mob" class="form-control" required></td>
+                    </tr>
+                </table>
+                <br>
+                <table>
+                    <tr>
+                        <td><input type="submit" style="margin-left: 120px;" class="btn btn-outline-success"></td>
+                    </tr>
+                </table>
+        	</form>
+        </div>
+</body>
+
+</html>

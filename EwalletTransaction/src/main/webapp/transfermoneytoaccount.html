@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Transfer money</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+			<h5 class="display-5" style="color:#226da5">Transfer Money</h5>
+				<img src="https://i0.wp.com/tech-ish.com/wp-content/uploads/2020/01/Kenya-Mobile-Money-MPESA-PesaLink.gif?fit=800%2C450&ssl=1" height="150px" width="300px">
+							<h6 style="color:red;">if password or amount you entered voileted you will be redirected to blank page that means transaction failed</h6>	
+				<h6 style="color:green;">Enter correct password or amount less than your balance account to solve aboue query</h6>
+			 	
+				<a href="homepage.jsp"><button type="button" class="btn btn-outline-success">back</button></a>
+	<hr>
+		<form  method="post"  action="TransferMoney">
+		<table>
+					<tr>
+                        <td>userid</td>
+                        <td><input type="text" name="uid" class="form-control" required></td>
+                    </tr>
+                    <tr>
+                        <td>password</td>
+                        <td><input type="password" name="pws" class="form-control" required></td>
+                    </tr>
+			
+				    <tr>
+                        <td>from account</td>
+                        <td><input type="text" name="facc" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>to account</td>
+                        <td><input type="text" name="tacc" class="form-control" required></td>
+                    </tr>
+
+                    <tr>
+                        <td>transfer amount</td>
+                        <td><input type="text" name="tamt" class="form-control" required></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><input type="Submit" name="Submit" class="btn btn-outline-success"></td>
+                    </tr>
+			</table>
+			
+			
+		</form>
+	</div>
+</body>
+</html>
